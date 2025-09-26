@@ -1,6 +1,7 @@
 import type { NodePath, PluginObj, types } from "@babel/core";
 
 export function inlineEnvVarsPlugin(mode: string, env: Record<string, string>) {
+  console.log("testing!!!!!");
   const allowed = new Map<string, string>();
   for (const [name, value] of Object.entries(env)) {
     if (name.startsWith("FRESH_PUBLIC_")) {
